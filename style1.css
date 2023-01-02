@@ -7,6 +7,11 @@ body {
     width: 90vw;
 }
 
+#links ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
 
 /*mobile*/
 
@@ -27,7 +32,8 @@ body {
 
 @media only screen and (min-width: 481px) {
     body {
-        margin: 30px auto;
+        width: 70vw;
+        margin: 80px auto;
     }
 
     #col1, #col2 {
@@ -53,8 +59,7 @@ body {
 
 @media only screen and (min-width: 769px) {
     body {
-        width: 80vw;
-        margin: 30px auto;
+        width: 60vw;
     }
 
     #col1, #col2 {
@@ -74,8 +79,7 @@ body {
 /*large desktop*/
 @media only screen and (min-width: 769px) {
     body {
-        width: 75vw;
-        margin: 30px auto;
+        width: 50vw;
     }
 
     #col1, #col2 {
