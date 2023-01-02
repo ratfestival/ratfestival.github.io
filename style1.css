@@ -4,6 +4,86 @@ body {
     background-color: black;
     color: white;
     font-family: 'Rubik', sans-serif;
+    width: 90vw;
+}
+
+
+/*mobile*/
+
+body {
+    margin: 30px auto;
+}
+
+#col1 {
+    background-color: lightslategrey;
+}
+
+#col2 {
+    background-color: rgb(77, 77, 77);
+}
+
+
+/*tablet*/
+
+@media only screen and (min-width: 481px) {
+    body {
+        margin: 30px auto;
+    }
+
+    #col1, #col2 {
+        float: left;
+    }
+
+    #col1 {
+        width: 40%;
+        
+    }
+
+    #col2 {
+        width: 60%;
+    }
+}
+
+/*desktop*/
+
+@media only screen and (min-width: 769px) {
+    body {
+        width: 80vw;
+        margin: 30px auto;
+    }
+
+    #col1, #col2 {
+        float: left;
+    }
+
+    #col1 {
+        width: 35%;
+    }
+
+    #col2 {
+        width: 65%;
+    }
+}
+
+
+/*large desktop*/
+@media only screen and (min-width: 769px) {
+    body {
+        width: 75vw;
+        margin: 30px auto;
+    }
+
+    #col1, #col2 {
+        float: left;
+    }
+
+    #col1 {
+        width: 30%;
+    }
+
+    #col2 {
+        width: 70%;
+    }
 }
 
 
