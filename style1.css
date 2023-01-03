@@ -1,10 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 
 body {
     background-color: black;
-    color: white;
+    color: black;
     font-family: 'Rubik', sans-serif;
     width: 90vw;
+}
+
+#col1 {
+    color: white;
+    background-color: black;
+}
+
+#col2 {
+    background-color: black;
 }
 
 ul {
@@ -17,8 +27,14 @@ a {
 
 }
 
+h1, h2, h3, h4 {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    
+}
+
 #tabs {
-    color: black;
+    
     font-family: 'Rubik';
     font-weight: bold;
     user-select: none;
@@ -26,16 +42,17 @@ a {
 
 #tabs ul{
     display: block;
-    width: 90%;
+    
     margin: auto;
 }
 
 #tabs li {
     font-size: 13px;
     display: inline-block; 
-    background-color: rgb(144, 144, 144);
+    background-color: black;
+    color: white;
     padding: 10px;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 10px;
 }
 
 
@@ -44,12 +61,20 @@ a {
     color: greenyellow;
 }
 
-#links {
-    background-color: white;
+.section {
+    
 }
 
-#links ul {
+#links {
+    background-color: black;
+    color: white;
+    border-radius: 0px 10px 10px 10px;
+    padding: 20px 0px;
+}
+
+#links ul, #aboutSec div {
     margin-block-start: 0px;
+    
 }
 
 #links a {
@@ -58,13 +83,37 @@ a {
 
 #links li {
     background-color: white;
-    height: 40px;
-    padding: 10px 40px;
+    color: black;
+    padding: 10px 20px;
     margin: 0px 0px 10px 0px;
     border-radius: 5px;
-    display: flex;
     align-items: center;
 }
+
+#links h4 {
+    font-size: 13px;
+    padding-block-end: 10px;
+}
+
+
+#links i {
+    padding: 0px 5px 0px 0px;
+}
+
+#tabs ul {
+    overflow-x: scroll;
+    white-space: nowrap;
+    scroll-behavior: auto !important;
+    overflow: hidden;
+
+    
+    
+}
+
+#aboutSec {
+    
+}
+
 
 .section {
     display:  none;
@@ -76,6 +125,22 @@ a {
 
 .selectedTab {
     background-color: white !important;
+    color: black !important;
+    transition: 0.5s;
+}
+
+#sidebar h1 {
+    font-size: 30px;
+}
+
+#sidebar h2 {
+    font-size: 15px;
+    /* font-family: 'DM Mono', monospace;*/
+    font-weight: normal;
+}
+
+#sidebar p {
+    font-size: 15px;
 }
 
 
@@ -95,6 +160,12 @@ body {
 #col2 {
     background-color: rgb(0, 0, 0);
 }
+
+#sidebar {
+    padding: 20px;
+}
+
+
 
 /*tablet*/
 
@@ -118,9 +189,25 @@ body {
     }
 
     #about, #links {
-        width: 90%;
+        
         margin: auto;
     }
+
+    #sidebar h1 {
+        font-size: 24px;
+    }
+    
+    #sidebar h2 {
+        font-size: 14px;
+        /* font-family: 'DM Mono', monospace;*/
+        font-weight: normal;
+    }
+    
+    #sidebar p {
+        font-size: 14px;
+    }
+    
+
 }
 
 /*desktop*/
@@ -155,11 +242,11 @@ body {
     }
 
     #col1 {
-        width: 30%;
+        width: 35%;
     }
 
     #col2 {
-        width: 70%;
+        width: 65%;
     }
 }
 
