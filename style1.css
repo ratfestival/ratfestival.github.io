@@ -7,10 +7,79 @@ body {
     width: 90vw;
 }
 
-#links ul {
+ul {
     list-style-type: none;
     padding: 0px;
 }
+
+a {
+    text-decoration: none;
+
+}
+
+#tabs {
+    color: black;
+    font-family: 'Rubik';
+    font-weight: bold;
+    user-select: none;
+}
+
+#tabs ul{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+#tabs li {
+    font-size: 13px;
+    display: inline-block; 
+    background-color: rgb(144, 144, 144);
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+
+
+#tabs a {
+    color: greenyellow;
+}
+
+#links {
+    background-color: white;
+}
+
+#links ul {
+    margin-block-start: 0px;
+}
+
+#links a {
+    color: black
+}
+
+#links li {
+    background-color: white;
+    height: 40px;
+    padding: 10px 40px;
+    margin: 0px 0px 10px 0px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.section {
+    display:  none;
+}
+
+.selected {
+    display: block !important;
+}
+
+.selectedTab {
+    background-color: white !important;
+}
+
+
+
 
 
 /*mobile*/
@@ -26,7 +95,6 @@ body {
 #col2 {
     background-color: rgb(0, 0, 0);
 }
-
 
 /*tablet*/
 

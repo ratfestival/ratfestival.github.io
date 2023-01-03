@@ -12,21 +12,86 @@
     <div id="col1">
         <div id="about">
             <div id="pfp"><img src="https://ratfestival.carrd.co/assets/images/image01.png?v=18b0594d"></div>
-            <h1>Allison</h1>
+            <h1>Ratfestival</h1>
+            <h2>aka allison</h2>
             <p>lorem ipsum</p>
         </div>
     </div>
     
     <div id="col2">
+        <nav id="tabs">
+            <ul>
+                <li id="ratfestivalTab" class="selectedTab tab">ratfestival</li>
+                <li id="allisonzartTab" class="tab">allisonzart</li>
+                <li id="aboutTab" class="tab">about</li>
+            </ul>
+        </nav>
         <div id="links">
-        <ul>
-            <li><a href="">link1</a></li>
-            <li><a href="">link2</a></li>
-            <li><a href="">link3</a></li>
-            <li><a href="">link4</a></li>
-        </ul>
+            <div id="ratfestivalSec" class="selected section">
+                <ul>
+                    <li><a href="">link1</a></li>
+                    <li><a href="">link2</a></li>
+                    <li><a href="">link3</a></li>
+                    <li><a href="">link4</a></li>
+                </ul>
+            </div>
+            <div id="allisonzartSec" class="section">
+                <ul>
+                    <li><a href="">link1</a></li>
+                    <li><a href="">link2</a></li>
+                    <li><a href="">link3</a></li>
+                    <li><a href="">link4</a></li>
+                </ul>
+            </div>
+
+            <div id="aboutSec" class="section">
+                <ul>
+                    <li><a href="">link1</a></li>
+                    <li><a href="">link2</a></li>
+                    <li><a href="">link3</a></li>
+                    <li><a href="">link4</a></li>
+                </ul>
+            </div>
+        
+
+
         </div>
     </div>
 
 </body>
+
+<script>
+    let tabs = document.getElementsByClassName('tab');
+    let sections = document.getElementsByClassName('section');
+
+    let ratfestTab = document.getElementById('ratfestivalTab');
+    let allisonTab = document.getElementById('allisonzartTab');
+    let aboutTab = document.getElementById('aboutTab');
+
+    for (let i = 0; i < tabs.length; i++) {
+        tabs[i].addEventListener("click", function() {toggleSelected(i)});
+    }
+    
+    function toggleSelected(index) {
+        let userClicked = tabs[index];
+        let associatedSection = sections[index];
+        
+        if (!userClicked.classList.contains('selectedTab')) {
+            for (let i = 0; i < tabs.length; i++) {
+                if (tabs[i].classList.contains('selectedTab')) {
+                    tabs[i].classList.remove('selectedTab');
+                    sections[i].classList.remove('selected');
+                }
+            }
+
+            userClicked.classList.add('selectedTab');
+            associatedSection.classList.add('selected');
+        }
+
+        return ;
+    }
+    
+
+</script>
+
 </html>
