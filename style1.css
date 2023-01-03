@@ -1,20 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 
+:root {
+    --background: black;
+    --text: #fff;
+    --link: #D1F22A;
+    --button: #FFF;
+    --buttonText: #fff;
+    --icon: #D1F22A;
+    --buttonCaption: rgb(179, 175, 175);
+}
+
 body {
-    background-color: black;
-    color: black;
+    background-color: var(--background);
+    color: var(--text);
     font-family: 'Rubik', sans-serif;
     width: 90vw;
 }
 
+a {
+    text-decoration: none;
+    color: var(--link);
+}
+
 #col1 {
-    color: white;
-    background-color: black;
+    background-color: var(--background);
+}
+
+#col1 a {
+    text-decoration: underline;
 }
 
 #col2 {
-    background-color: black;
+    color: var(--text);
 }
 
 ul {
@@ -22,10 +40,7 @@ ul {
     padding: 0px;
 }
 
-a {
-    text-decoration: none;
 
-}
 
 h1, h2, h3, h4 {
     margin-block-start: 0px;
@@ -42,32 +57,27 @@ h1, h2, h3, h4 {
 
 #tabs ul{
     display: block;
-    
     margin: auto;
 }
 
 #tabs li {
     font-size: 13px;
     display: inline-block; 
-    background-color: black;
-    color: white;
+    background-color: var(--background);
+    color: var(--text);
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 0px;
+    border-bottom: 2px solid var(--background);
+
 }
-
-
 
 #tabs a {
-    color: greenyellow;
-}
-
-.section {
-    
+    color: var(--buttonText);
 }
 
 #links {
-    background-color: black;
-    color: white;
+    background-color: var(--background);
+    color: var(--button);
     border-radius: 0px 10px 10px 10px;
     padding: 20px 0px;
 }
@@ -78,13 +88,12 @@ h1, h2, h3, h4 {
 }
 
 #links a {
-    color: black
+    color: var(--buttonText)
 }
 
 #links li {
-    background-color: white;
-    color: black;
-    padding: 10px 20px;
+    background-color: var(--background);
+    padding: 7px 0px;
     margin: 0px 0px 10px 0px;
     border-radius: 5px;
     align-items: center;
@@ -93,6 +102,14 @@ h1, h2, h3, h4 {
 #links h4 {
     font-size: 13px;
     padding-block-end: 10px;
+    font-weight: normal;
+    font-family: 'DM Mono', monospace;
+    color: var(--buttonCaption);
+}
+
+#links h3:hover {
+    text-decoration:underline;
+    text-decoration-color: #D1F22A;
 }
 
 
@@ -111,7 +128,7 @@ h1, h2, h3, h4 {
 }
 
 #aboutSec {
-    
+    color: var(--text);
 }
 
 
@@ -124,19 +141,27 @@ h1, h2, h3, h4 {
 }
 
 .selectedTab {
-    background-color: white !important;
-    color: black !important;
+    /*background-color: var(--button) !important;*/
+   
+    border-bottom-color: #D1F22A !important;
     transition: 0.5s;
 }
 
+#titles {
+    display: block;
+}
 #sidebar h1 {
     font-size: 30px;
+    display: inline-block;
+
 }
 
 #sidebar h2 {
     font-size: 15px;
-    /* font-family: 'DM Mono', monospace;*/
+     font-family: 'DM Mono', monospace;
     font-weight: normal;
+    display: inline-block;
+    color: var(--buttonCaption);
 }
 
 #sidebar p {
@@ -154,22 +179,28 @@ body {
 }
 
 #col1 {
-    background-color: rgb(0, 0, 0);
+    background-color: var(--background);
 }
 
 #col2 {
-    background-color: rgb(0, 0, 0);
+    background-color: var(--background);
 }
 
 #sidebar {
-    padding: 20px;
+    padding: 0px;
 }
 
 
 
 /*tablet*/
 
+
+
 @media only screen and (min-width: 481px) {
+
+
+    
+
     body {
         width: 70vw;
         margin: 80px auto;
@@ -193,18 +224,27 @@ body {
         margin: auto;
     }
 
+    #sidebar h1, #sidebar h2 {
+        display: block;
+    }
+
     #sidebar h1 {
         font-size: 24px;
     }
     
     #sidebar h2 {
-        font-size: 14px;
+        font-size: 12px;
+        padding-block-start: 5px;
         /* font-family: 'DM Mono', monospace;*/
         font-weight: normal;
     }
     
     #sidebar p {
         font-size: 14px;
+    }
+
+    #sidebar {
+        padding-right: 20px;
     }
     
 
