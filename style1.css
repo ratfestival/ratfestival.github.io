@@ -178,6 +178,17 @@ th {
     font-weight: 500;
 }
 
+#zineList {
+    margin-block-start: 3px;
+    margin-block-end: 3px;
+}
+#zineList li{
+    
+    margin: 1px 0px;
+    
+    padding: 0px;
+}
+
 
 /*mobile*/
 
