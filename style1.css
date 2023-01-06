@@ -174,8 +174,19 @@ table {
     text-align: left;
 }
 
+tr {
+    margin-block-end: 10px;
+}
+
+table {
+    border: none;
+}
 th {
     font-weight: 500;
+}
+
+th, td {
+    padding: 5px 0px;
 }
 
 #zineList {
@@ -187,6 +198,9 @@ th {
     padding: 0px;
 }
 
+tbody {
+    vertical-align: top;
+}
 
 /*mobile*/
 
