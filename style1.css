@@ -23,6 +23,8 @@ a {
     color: var(--link);
 }
 
+
+
 #col1 {
     background-color: var(--background);
 }
@@ -218,6 +220,11 @@ body {
 
 #sidebar {
     padding: 0px;
+}
+
+#aboutSec a {
+    color: var(--link);
+    text-decoration: underline;
 }
 
 
