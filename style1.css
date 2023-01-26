@@ -18,6 +18,26 @@ body {
     width: 90vw;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--background);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--buttonCaption);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--link);
+  }
+
 a {
     text-decoration: none;
     color: var(--link);
@@ -73,6 +93,12 @@ h1, h2, h3, h4 {
 
 }
 
+.tab:hover {
+    border-bottom-color: var(--link) !important;
+    transition: 0.5s;
+    
+}
+
 #tabs a {
     color: var(--buttonText);
 }
@@ -111,7 +137,7 @@ h1, h2, h3, h4 {
 
 #ratfestivalSec h3:hover {
     text-decoration:underline;
-    text-decoration-color: #D1F22A;
+    text-decoration-color: var(--link);
 }
 
 
@@ -142,9 +168,7 @@ h1, h2, h3, h4 {
     display: block !important;
 }
 
-.selectedTab {
-    /*background-color: var(--button) !important;*/
-   
+.selectedTab {   
     border-bottom-color: #D1F22A !important;
     transition: 0.5s;
 }
@@ -203,6 +227,8 @@ tbody {
     vertical-align: top;
 }
 
+
+
 /*mobile*/
 
 body {
@@ -225,6 +251,10 @@ body {
     color: var(--link);
     text-decoration: underline;
 }
+
+
+
+
 
 
 
