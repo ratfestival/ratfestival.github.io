@@ -266,6 +266,10 @@ body {
         text-align: center;
     }
 
+    #pfp {
+        text-align: center;
+    }
+
 
 
 
@@ -279,6 +283,10 @@ body {
 @media only screen and (min-width: 481px) {
 
     #titles {
+        text-align: left;
+    }
+
+    #pfp {
         text-align: left;
     }
         
