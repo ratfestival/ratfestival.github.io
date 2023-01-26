@@ -126,7 +126,7 @@ h1, h2, h3, h4 {
     color: var(--buttonText)
 }
 
-#links li {
+#ratfestivalSec li {
     background-color: var(--background);
     padding: 7px 0px;
     margin: 0px 0px 10px 0px;
@@ -234,7 +234,10 @@ tbody {
     vertical-align: top;
 }
 
-
+.outlineList li {
+    padding: 0px;
+    margin: 0px;
+}
 
 /*mobile*/
 
