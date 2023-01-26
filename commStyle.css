@@ -27,8 +27,17 @@
 
 
 .commItem img {
-    max-width: 170px;
+    width: 100%;
     user-select: none;
+    pointer-events: none;
+}
+
+img {
+    pointer-events: none;
+}
+
+#paintingImg {
+    width: 205%;
 }
 
 
@@ -98,7 +107,7 @@
 
 @media only screen and (min-width: 481px) {
     .commContainer {
-        grid-template-columns: auto auto auto;
+        grid-template-columns: 177px 177px 177px;
 
         grid-template-areas: 
         'sketchH colorH renderH'
