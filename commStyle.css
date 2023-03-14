@@ -116,20 +116,20 @@ img {
     
         'lineH paintingH paintingH'
         'lineImg paintingImg paintingImg'
-        'lineP paintingP paintingP'
+        'lineP paintingP paintingP';
     }
     
 }
 
-/*
+
 
 @media only screen and (min-width: 769px) {
     .commContainer {
         grid-template-columns: auto auto auto auto auto;
-
         grid-template-areas: 
         'sketchH colorH renderH lineH paintingH'
         'sketchImg colorImg renderImg lineImg paintingImg'
-        'sketchP colorP renderP lineP paintingP'
+        'sketchP colorP renderP lineP paintingP';
+        overflow: scroll;
     }
-}*/
+}

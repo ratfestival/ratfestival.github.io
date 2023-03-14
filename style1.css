@@ -298,21 +298,30 @@ body {
         
 
     body {
-        width: 70vw;
-        margin: 80px auto;
+        margin: 80px;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 200px auto auto auto;
+        column-gap: 30px;
+        margin: auto;
+
     }
 
     #col1, #col2 {
-        float: left;
+        /*float: left;*/
     }
 
     #col1 {
-        width: 40%;
+        /*width: 40%;*/
+        grid-column: 1 / span 1;
         
     }
 
     #col2 {
-        width: 60%;
+        /*width: 60%;*/
+        grid-column: 2 / span 3;
     }
 
     #about, #links {
@@ -359,19 +368,19 @@ body {
 
 @media only screen and (min-width: 769px) {
     body {
-        width: 60vw;
+        /*width: 60vw;*/
     }
 
     #col1, #col2 {
-        float: left;
+        /*float: left;*/
     }
 
     #col1 {
-        width: 35%;
+        /*width: 35%;*/
     }
 
     #col2 {
-        width: 65%;
+        /*width: 65%;*/
     }
 }
 
@@ -379,19 +388,19 @@ body {
 /*large desktop*/
 @media only screen and (min-width: 769px) {
     body {
-        width: 50vw;
+        /*width: 50vw;*/
     }
 
     #col1, #col2 {
-        float: left;
+        /*float: left;*/
     }
 
     #col1 {
-        width: 35%;
+        /*width: 35%;*/
     }
 
     #col2 {
-        width: 65%;
+        /*width: 65%;*/
     }
 }
 
