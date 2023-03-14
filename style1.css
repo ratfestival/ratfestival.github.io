@@ -239,6 +239,12 @@ tbody {
     margin: 0px;
 }
 
+#tabs {
+    position: sticky;
+    top: 0px;
+    background-color: black;
+}
+
 /*mobile*/
 
 body {
@@ -316,6 +322,7 @@ body {
     #col1 {
         /*width: 40%;*/
         grid-column: 1 / span 1;
+        position: fixed;
         
     }
 
