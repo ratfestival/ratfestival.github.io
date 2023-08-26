@@ -180,6 +180,33 @@ h1, h2, h3, h4 {
     transition: 0.5s;
 }
 
+.slideButton {
+    background-color: black;
+    color: white;
+    border-style: none;
+    font-family: "DM Mono", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.slideButton:hover {
+    background-color:#D1F22A;
+    color:black;
+    transition: 0.5s;
+}
+
+.selectedSlide {
+    background-color: #D1F22A;
+    color: black;
+    transition: 0.5s;
+}
+
+.slideDesc {
+    padding: 0px 10px;
+}
+
 #titles {
     display: block;
 }
@@ -295,6 +322,46 @@ body {
     margin: auto;
 }
 
+.mySlides img {
+    max-height: 500px;
+}
+
+.slidePagination {
+    margin: 0px auto 10px;
+    display: inline-flex;
+    overflow-x: scroll;
+    width: -webkit-fill-available;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.slidePagination::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+
+.slideInfo {
+    margin: 10px 0px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: 'slideImg slideDesc';
+}
+
+.slideInfo img {
+    grid-column: 0 1;
+
+}
+
+.slideInfo p {
+    grid-column-end: 1;
+}
+
+
+.slideArrows {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-bottom: 7px;
+}
 
 
 
@@ -319,7 +386,7 @@ body {
 
     main {
         display: grid;
-        grid-template-columns: 200px auto auto auto;
+        grid-template-columns: 200px auto;
         column-gap: 30px;
         margin: auto;
 
@@ -338,7 +405,7 @@ body {
 
     #col2 {
         /*width: 60%;*/
-        grid-column: 2 / span 3;
+        grid-column: 2 / span 1;
     }
 
     #about, #links {
@@ -378,18 +445,27 @@ body {
         font-size: 13px;
     }
 
-    .textContainer {
-        max-width: 70%;
-    }
+
     
+    main {
+        width: 90%;
+    }
+
+    .textContainer, .commContainer {
+        max-width: 90%;
+    }
 
 }
 
 
 /*large desktop*/
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 830px) {
     body {
         /*width: 50vw;*/
+    }
+
+    main {
+        width: 70%;
     }
 
     #col1, #col2 {
@@ -404,9 +480,10 @@ body {
         /*width: 65%;*/
     }
 
-    .textContainer {
-        max-width: 50%;
+    .textContainer, .commContainer {
+        max-width: 70%;
     }
+
 }
 
 
