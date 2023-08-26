@@ -409,6 +409,11 @@ body {
     #col2 {
         /*width: 65%;*/
     }
+
+    .textContainer {
+        max-width: 50%;
+        min-width: 500px;
+    }
 }
 
 
