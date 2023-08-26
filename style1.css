@@ -213,6 +213,11 @@ tr {
 table {
     border: none;
 }
+
+#aboutSec th {
+    padding-right: 10px;
+}
+
 th {
     font-weight: 500;
 }
@@ -285,6 +290,11 @@ body {
     font-size: 17px;
 }
 
+.tos {
+    max-width: 700px;
+    margin: auto;
+}
+
 
 
 
@@ -304,7 +314,7 @@ body {
         
 
     body {
-        margin: 80px;
+        margin-top: 80px;
     }
 
     main {
@@ -367,11 +377,13 @@ body {
     #tabs li {
         font-size: 13px;
     }
+
+    .textContainer {
+        max-width: 70%;
+    }
     
 
 }
-
-/*desktop*/
 
 
 /*large desktop*/
@@ -394,7 +406,6 @@ body {
 
     .textContainer {
         max-width: 50%;
-        min-width: 500px;
     }
 }
 
