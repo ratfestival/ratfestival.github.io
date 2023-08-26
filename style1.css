@@ -373,24 +373,6 @@ body {
 
 /*desktop*/
 
-@media only screen and (min-width: 769px) {
-    body {
-        /*width: 60vw;*/
-    }
-
-    #col1, #col2 {
-        /*float: left;*/
-    }
-
-    #col1 {
-        /*width: 35%;*/
-    }
-
-    #col2 {
-        /*width: 65%;*/
-    }
-}
-
 
 /*large desktop*/
 @media only screen and (min-width: 769px) {
