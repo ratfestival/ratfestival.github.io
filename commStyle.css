@@ -43,6 +43,7 @@ img {
 
 
 .commContainer {
+    /*
     display: grid;
     column-gap: 20px;
     row-gap: 10px;
@@ -58,10 +59,10 @@ img {
 
     'paintingH paintingH'
     'paintingImg paintingImg'
-    'paintingP paintingP';
+    'paintingP paintingP';*/
 }
 
-.commItem p {
+.slideDesc p {
     font-size: 13px;
     color: var(--buttonCaption);
 }
@@ -107,6 +108,7 @@ img {
 
 @media only screen and (min-width: 481px) {
     .commContainer {
+        /*
         grid-template-columns: 177px 177px 177px;
 
         grid-template-areas: 
@@ -116,20 +118,22 @@ img {
     
         'lineH paintingH paintingH'
         'lineImg paintingImg paintingImg'
-        'lineP paintingP paintingP';
+        'lineP paintingP paintingP';*/
     }
     
 }
 
 
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 820px) {
     .commContainer {
+        /*
         grid-template-columns: auto auto auto auto auto;
         grid-template-areas: 
         'sketchH colorH renderH lineH paintingH'
         'sketchImg colorImg renderImg lineImg paintingImg'
         'sketchP colorP renderP lineP paintingP';
-        overflow: scroll;
+        /*overflow: scroll;*/
+       
     }
 }
