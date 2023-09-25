@@ -176,13 +176,14 @@ h1, h2, h3, h4 {
 }
 
 .selectedTab {   
-    border-bottom-color: #D1F22A !important;
+    border-bottom-color: var(--icon) !important;
     transition: 0.5s;
 }
 
 .slideButton {
-    background-color: black;
-    color: white;
+    background-color: var(--background);
+
+    color: var(--button);
     border-style: none;
     font-family: "DM Mono", Helvetica, Arial, sans-serif;
     font-weight: normal;
@@ -192,13 +193,13 @@ h1, h2, h3, h4 {
 }
 
 .slideButton:hover {
-    background-color:#D1F22A;
+    background-color: var(--icon);
     color:black;
     transition: 0.5s;
 }
 
 .selectedSlide {
-    background-color: #D1F22A;
+    background-color: var(--icon);
     color: black;
     transition: 0.5s;
 }
@@ -223,22 +224,23 @@ h1, h2, h3, h4 {
     color: var(--buttonCaption);
 }
 
-#sidebar p, #aboutSec p {
+#sidebar p {
     font-size: 15px;
     line-height: 20px;
 }
 
 table {
-    font-size: 14px;
+    font-size: 13px;
     text-align: left;
+    border: none;
 }
 
 tr {
     margin-block-end: 10px;
 }
 
-table {
-    border: none;
+#aboutSec table {
+    font-family: 'DM Mono', monospace;
 }
 
 #aboutSec th {
@@ -253,6 +255,13 @@ th, td {
     padding: 5px 0px;
 }
 
+
+#aboutSec p {
+    color: var(--buttonCaption);
+    font-size: 13px;
+    line-height: 16px;
+}
+
 #zineList {
     margin-block-start: 3px;
     margin-block-end: 3px;
@@ -260,6 +269,13 @@ th, td {
 #zineList li{
     margin: 1px 0px;
     padding: 0px;
+    color: var(--buttonCaption);
+    padding-block-end: 2px;
+}
+
+#zineList em {
+    font-style: italic;
+    color: white;
 }
 
 tbody {
@@ -413,6 +429,7 @@ body {
         margin: auto;
     }
 
+
     #sidebar h1, #sidebar h2 {
         display: block;
     }
@@ -428,7 +445,7 @@ body {
         font-weight: normal;
     }
     
-    #sidebar p, #aboutSec p {
+    #sidebar p{
         font-size: 14px;
         line-height: 19px;
     }
@@ -459,7 +476,7 @@ body {
 
 
 /*large desktop*/
-@media only screen and (min-width: 830px) {
+@media only screen and (min-width: 961px) {
     body {
         /*width: 50vw;*/
     }
