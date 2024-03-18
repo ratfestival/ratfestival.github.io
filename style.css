@@ -1,0 +1,674 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+
+
+:root {
+    --background: black;
+    --mainColor: #fff;
+    --secondaryColor: #b6adb8;
+    --accent: #BBEF6E;
+}
+
+* {
+    transition: 0.2s;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--mainColor);
+    font-family: "Rubik", sans-serif;
+    margin: calc(10px + 1.5vw);
+    height: 100%;
+
+    overflow-y: scroll;
+
+}
+
+body {
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        
+    }
+    100% {
+        opacity: 1;
+
+    }
+}
+
+.page { 
+    animation: fadeInAnimation ease 0.7s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+a {
+    color: var(--accent);
+}
+
+#siteTitle, #siteLinks {
+    font-family: "Rubik Mono One", sans-serif;
+
+    
+}
+
+
+
+
+#siteLinks ul {
+    padding-left: 0px;
+    list-style-type: none;
+
+}
+
+.tab { /* selected tab*/
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    color: var(--mainColor);
+    text-decoration-color: var(--accent);
+}
+
+.tab:hover {
+    text-decoration-color: var(--accent);
+}
+
+
+.hiddenPage {
+    display: none !important;
+}
+
+.hiddenTab {
+    color: var(--secondaryColor);
+    text-decoration-color: var(--background);
+}
+
+
+#socialIcons li {
+    display: inline-block;
+    width: 10%;
+    text-align: center;
+    font-size: 100%;
+}
+
+
+.gallery {
+    display: block;
+    padding-bottom: 5vw;
+}
+
+.thumbnail {
+    background-size: cover;
+}
+
+
+/*scrollbar*/
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: rgb(61, 61, 61);
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--secondaryColor); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--accent); 
+  }
+
+
+/* mobile */
+
+
+
+.wideScreen {
+    display: none;
+}
+
+.smallScreen {
+
+    display: block;
+}
+
+
+/*getting the mobile header w the hamburger to sit at the top*/
+#mobileHeader {
+    position: fixed;
+    width: calc(97vw - 20px);
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(180deg, rgba(0,0,0,0.8) 80%, rgba(0,0,0,0) 100%);
+    height: 45px;
+    padding: calc(10px + 1.5vw);
+    transition: 0.25s;
+    color: var(--accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+}
+
+#mobileHeader h1 {
+
+    font-family: "Rubik Mono One", monospace;
+    margin: 0px;
+    font-size: 8vw;
+}
+
+#mobileHeader div {
+    float: left;
+    transition: 0.25s;
+}
+
+#mobileSiteIcon {
+    height: 60px;
+    transition: 0.25s;
+}
+
+#mobileSiteTitle {
+    width: 75%;
+}
+
+#mobileSiteTitleHead {
+    transition: 0.25s;
+
+}
+
+main {
+    margin-top: calc(70px + 3vw);
+    
+}
+
+
+/*hamburger menu*/
+
+#mobileHamburger {
+    width: 25%;
+    text-align: right;
+    font-size: calc(10px + 8vw);
+}
+
+#sidebar {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+    top: 0px;
+    left: 0px;
+}
+
+#mobileClose {
+    font-size: 60px;
+    text-align: right;
+}
+
+.opened#sidebar {
+
+    z-index: 100;
+    background-color: var(--accent);
+    color: black;
+    opacity: 1;
+    visibility: visible;
+    
+}
+
+#linkList {
+    margin: calc(10px + 1.5vw);
+    font-size: calc(10px + 5vw);
+    
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+    
+}
+
+.opened .tab { /* selected tab*/
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    color: var(--background);
+    text-decoration-color: var(--background);
+    padding: 13px 0px;
+}
+
+.opened .hiddenTab {
+    color: var(--background);
+    text-decoration-color: var(--accent);
+}
+
+.opened .tab:hover {
+    text-decoration-color: var(--background);
+}
+
+.opened {
+    visibility: visible !important;
+    opacity: 1;
+}
+
+.hidePage {
+    display: none;
+}
+
+
+
+@keyframes slideInAnimation {
+    0% {
+        left: 100vw;
+        
+    }
+    100% {
+        left: 0px;
+
+    }
+}
+
+
+/* only 1 column so just used block*/
+
+.page {
+    display: block;
+}
+
+/* formatting the gallery */
+
+.thumbnail {
+    width: 100%;
+    float: left;
+    display: block;
+    margin-bottom: calc(10px + 1vw);
+}
+
+.portrait {
+    height: 120vw;
+    background-color: aqua;
+}
+
+.landscape {
+    height: 60vw;
+    background-color: blueviolet;
+}
+
+#overlayContainer {
+    position: fixed;
+    z-index: 2000;
+    background-color: hsla(0, 0%, 0%, 0.85);
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+
+}
+
+.openOverlay {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+#popClose {
+    font-size: 60px;
+    text-align: right;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+}
+
+#popClose:hover {
+    color: tomato;
+}
+
+#fullImg {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+
+/* about */
+
+
+
+.page h1, .page h2 {
+    font-family: "Rubik Mono One";
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.page h1 {
+    font-size: 20pt;
+}
+
+.page h2 {
+    font-size: 13pt;
+    margin: 10px 0px;
+}
+
+.page h3 {
+    font-size: 11pt;
+    margin: 2px 0px;
+}
+
+strong {
+    color: var(--accent);
+}
+
+p {
+    font-size: 11pt;
+    line-height: 16pt;
+    max-width: 414px;
+    margin-top: 0px;
+    margin-bottom: 25px;
+}
+
+
+
+
+.page ul {
+    margin: 0px;
+    padding-left: 15px;
+}
+
+.page li {
+    font-size: 11pt;
+    padding: 3px 0px;
+    list-style-type: disc;
+    
+}
+
+.page li::marker {
+    color: var(--accent);
+}
+
+.caption {
+    color: var(--secondaryColor);
+}
+
+#aboutImage {
+    
+}
+
+.page img {
+    max-width: 100%;
+}
+
+.scrollPaused {
+    overflow: hidden;
+    overflow-y: hidden !important;
+}
+
+.page section {
+    margin-bottom: 20px;
+}
+
+table {
+    max-width: 500px;
+    font-size: 11pt;
+}
+
+tr {
+    vertical-align: top;
+    line-height: 16pt;
+    
+}
+
+td, th {
+    padding-bottom: 10px;
+}
+
+.question {
+    color: var(--secondaryColor);
+}
+
+.question td {
+    font-style: italic;
+    
+}
+
+/* tablet */
+
+@media only screen and (min-width: 481px) {
+
+    .scrollPaused {
+        overflow: hidden;
+        position: absolute;
+        z-index: -100;
+        overflow-y: hidden !important;
+    }
+    
+
+    #sidebar {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        top: unset;
+        left: unset;
+    }
+
+
+    #stickySidebarContainer {
+        position: fixed;
+    }
+
+    .wideScreen {
+        display: block;
+    }
+
+    .smallScreen {
+        display: none !important;
+    }
+
+    body {
+        display: grid;
+        gap: 20px 20px;
+        grid-template-columns: 25vw auto;
+        margin: calc(10px + 2.5vh);
+
+    }
+
+    #sidebar {
+        grid-column: 1 / 2;
+        
+    }
+
+    #desktopHeader img {
+        width: 25vw;
+        max-width: 200px;
+    }
+
+    /* illustrator + designer gray text */
+    #desktopHeader h2 {
+        color: var(--secondaryColor);
+        font-weight: 800;
+        font-size: calc(8px + 0.7vw);
+        margin: 0px;
+    }
+
+    
+
+    main {
+        grid-column: 2 / 3;
+        margin-top: 0px;
+
+    }
+
+    #linkList {
+        margin: 5vh 0px;
+    }
+
+    /* list of links to pages */
+    #linkList li {
+        margin: 10px 0px;
+        font-size: calc(9px + 1vw);
+    }
+
+    #socialIcons li {
+        width: 4%;
+        font-size: 15px;
+    }
+
+    .page {
+        display: grid;
+    }
+
+    /* portfolio section */
+
+    #portfolio {
+        height: 94vh;
+    }
+
+    .gallery {
+        display: grid;
+        grid-gap: 15px 15px;
+        grid-template-columns: auto auto;
+        grid-template-rows: 42vw 42vw 42vw 42vw 42vw 42vw 42vw 42vw;
+
+    }
+
+
+    .thumbnail {
+        height: 100%;
+        width: 100%;
+    }
+
+    .portrait {
+        
+    }
+
+    .landscape {
+        
+        grid-column: span 2;
+    }
+
+    /*about*/
+
+    .page h1 {
+        font-size: 20pt;
+        margin-bottom: 10px;
+    }
+
+    .page h2 {
+        font-size: 15pt;
+        margin: 10px 0px;
+    }
+
+    p {
+        font-size: 11pt;
+        max-width: 414px;
+        margin-top: 0px;
+        line-height: 17pt;
+        margin-bottom: 35px;
+    }
+
+    .page ul {
+        margin: 0px;
+        padding-left: 19px;
+    }
+
+    .page li {
+        font-size: 11pt;
+        line-height: 13pt;
+        padding: 3px 0px;
+    }
+    .caption {
+        font-size: 9pt;
+    }
+
+    .page li::marker {
+        color: var(--accent);
+        font-size: 14pt;
+    }
+
+    .page section {
+        
+        margin-bottom: 35px;
+    }
+
+    #slotContainer {
+    }
+
+
+
+}
+
+
+/* Desktop */
+
+@media only screen and (min-width: 850px) {
+    body {
+        margin: calc(30px + 1vw );
+        grid-template-columns: 20vw auto;
+
+    }
+
+    #linkList li {
+        margin: 10px 0px;
+        font-size: calc(14px + 0.7vw);
+        
+    }
+
+    #socialIcons li {
+        width: 7%;
+        font-size: 18px;
+
+    
+    }
+
+
+    #desktopHeader h2 {
+        font-size: calc(12px + 0.2vw);
+    }
+
+    #desktopHeader img {
+        width: 20vw;
+    }
+    
+    .gallery {
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 30vw 30vw 30vw 30vw 30vw;
+    }
+    
+    .thumbnail {
+    }
+
+    /*about section*/
+    #about, #commissions {
+        grid-gap: 15px 15px;
+        grid-template-columns: auto auto;
+    }
+
+    .page h1{
+        grid-column: span 3;
+    }
+
+    .pageImages {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column: span 3;
+    }
+
+    #slotContainer {
+        grid-column: span 3;
+    }
+
+    
+
+}
