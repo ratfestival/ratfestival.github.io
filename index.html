@@ -5,602 +5,273 @@
 	<meta content="width=device-width, initial-scale=1" name="viewport" />
 
 	<title>Ratfestival Links</title>
-	<link rel="stylesheet" type="text/css" href="style1.css">
-    <link rel="stylesheet" type="text/css" href="commStyle.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="icon" href="favicon.ico">
 
-
-	<!--<link rel="icon" href="favicon.ico">-->
 </head>
+
+<!-- organized into a grid-->
 <body>
-    <main>
-        <div id="col1">
-            <div id="sidebar">
-                <div id="pfp"><img src="https://ratfestival.carrd.co/assets/images/image01.png?v=18b0594d"></div>
-                <div id="titles">
-                    <h1>Ratfestival</h1>
-                    <h2>allison (she/her)</h2>
-                    <h2><strong>0/3</strong> Commission Slots Open<br><!--# Commission Slots Open: <strong>0</strong>/3 --></h2>
-                    <ul class="iconLinks">
-                        <li>
-                            <a href="mailto:ratfestival.art@gmail.com">
-                                <h4><i class="bi bi-envelope-fill"></i></h4>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/ratfestival">
-                                <h4><i class="bi bi-twitter"></i></h4>
-                            </a>
-                        </li>
-                        <li>
-                            
-                            <a href="https://instagram.com/ratfestival">
-                                <h4><i class="bi bi-instagram"></i></h4>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://ratfest.tumblr.com">
-                                <h4><i><img style="height: 13px; fill: #D1F22A;" src="tumblriconGreen.svg"></i></h4>
-                            </a>
-                        </li>
-                        <li>
-                            
-                            <a href="https://ko-fi.com/ratfestival">
-                                <h4><i class="bi bi-cup-hot-fill"></i></h4>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
 
-                
-                <p></p>
-            </div>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+        if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+            document.getElementById("mobileSiteTitleHead").style.fontSize = "6vw";
+            document.getElementById("mobileHeader").style.height = "45px";
+        } else {
+            /* top */
+            document.getElementById("mobileSiteTitleHead").style.fontSize = "8vw";
+            document.getElementById("mobileHeader").style.height = "45px";
+        }
+        }
+    </script>
+
+    <!-- smallScreen = mobile, wideScreen = tablet/desktop -->
+
+    <!-- title and hamburger menu icon go here on mobile, so hide this on desktop -->
+    
+        <div id="mobileHeader" class="smallScreen">
+            <div id="mobileSiteTitle"><h1 id="mobileSiteTitleHead">Ratfestival</h1></div>
+            <!-- fear not, this is the hamburger icon-->
+            <div id="mobileHamburger"><i class="bi bi-list"></i></div>
         </div>
+
         
-        <div id="col2">
-            <nav id="tabs">
-                <ul>
-                    <li id="ratfestivalTab" class="tab selectedTab">links</li>
-                    <li id="aboutTab" class="tab">about</li>
-                    <li id="commTab" class="tab">commission info</li>
-                </ul>
-            </nav>
-            <div id="links">
-                <div id="ratfestivalSec" class="selected section">
+    
+
+    <!-- this is the desktop sidebar-->
+    <div id="sidebar" class="mobilePanel">
+        <div id="mobileClose" class="smallScreen"><i class="bi bi-x"></i></div>
+        <div id="stickySidebarContainer">
+        <div id="desktopHeader" class="wideScreen">
+            <img src="ratfestivalMarkTitle.png" alt="Ratfestival">
+            <h2>illustrator + designer</h2>
+        </div>
+
+        <!-- links live here-->
+        <nav id="siteLinks">
+
+            <!-- links to pages go here-->
+            <ul id="linkList">
+                <li class="tab">Portfolio</li>
+                <li class="tab hiddenTab">About</li>
+                <li class="tab hiddenTab">Commissions</li>
+                <li class="tab hiddenTab">FAQ</li>
+            </ul>
+
+                <!-- bar of social icons -->
+            <ul id="socialIcons" class="wideScreen">
+                <li>
+                    <a href="https://ratfestival.etsy.com">
+                        <i class="bi bi-shop-window"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/ratfestival">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com/ratfestival">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://ratfest.tumblr.com">
+                        <i><img style="height: 13px;" src="tumblricon.svg"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:ratfestival.art@gmail.com">
+                        <i class="bi bi-envelope-fill"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://ko-fi.com/ratfestival">
+                        <i class="bi bi-cup-hot-fill"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        </div>
+    </div>
+    
+    
+
+    <!-- for all the content that changes on each page -->
+    <main id="pageContainer">
+        <!-- these sections are for the site pages. they are all grids. -->
+
+        <div id="overlayContainer">
+            <div id="popClose" ><i class="bi bi-x"></i></div>
+            <div id="fullImg"></div>
+
+        </div>
+
+        <section class="page" id="portfolio">
+            <div class="gallery">
+
+                <div class="thumbnail landscape" style="background-image: url(pfolio/gear5luffy.jpg);"></div>
+                <div class="thumbnail portrait" style="background-image: url(pfolio/Bonney_and_Kuma.jpg);"></div>
+                <div class="thumbnail portrait" style="background-image: url(pfolio/KidPirates.jpg);"></div>
+                <div class="thumbnail portrait" style="background-image: url(pfolio/law.jpg);"></div>
+                <div class="thumbnail portrait" style="background-image: url(pfolio/corazon.jpg);"></div>
+                <div class="thumbnail landscape" style="background-image: url(pfolio/horses.jpg);"></div>
+                <div class="thumbnail portrait" style="background-image: url(pfolio/baizhuA3.jpg);"></div>
+                <div class="thumbnail portrait" style="background-image: url(pfolio/vash.jpeg);"></div>
+                <div class="thumbnail landscape" style="background-image: url(pfolio/wolfwood.jpg);"></div>
+                <div class="thumbnail landscape" style="background-image: url(pfolio/aquarium.jpg);"></div>
+                <div class="thumbnail portrait" style="background-image: url(pfolio/raidenBoss.jpg);"></div>
+            </div>
+        </section>
+
+        
+
+        <section   class="page hiddenPage" id="about">
+            
+            
+            <div>
+                <h1>About</h1>
+                
+                <p class="aboutParagraph">
+                    Hi! I'm Allison aka Ratfestival! I'm a chinese-american illustrator and designer who likes shapes, bright colors, and animanga! I'm always on the look out for new opportunities, so if you're interested please send me an email at <a href="mailto:ratfestival.art@gmail.com">ratfestival.art@gmail.com</a>! 
+                    
+                </p>
+
+                <div id="experienceTable">
+                    <h2>Zine Experience</h2>
                     <ul>
+                        
                         <li>
-                            <h4><i class="bi bi-shop-window"></i>shop</h4>
-                            <a href="https://ratfestival.etsy.com">
-                                <h3>ratfestival.etsy.com</h3>
-                            </a>
+                            Devilish Delights: A Chainsawman Cookbook<br>
+                            <span class="caption">Page Artist</span>
                         </li>
                         <li>
-                            <h4><i class="bi bi-twitter"></i>twitter</h4>
-                            <a href="https://twitter.com/ratfestival">
-                                
-                                <h3>@ratfestival</h3>
-                            </a>
+                            Song of Stars: A Dainkae and Kaedain Zine <br>
+                            <span class="caption">Guest Page & Merch Artist</span>
                         </li>
                         <li>
-                            <h4><i class="bi bi-instagram"></i>instagram</h4>
-                            <a href="https://instagram.com/ratfestival">
-                                <h3>@ratfestival</h3>
-                            </a>
+                            Fluorescent Bloom: Men of Sumeru Zine<br>
+                            <span class="caption">Guest Page Artist</span>
                         </li>
                         <li>
-                            <h4><i><img style="height: 13px; fill:#b3afaf;" src="tumblricon.svg"></i>tumblr</h4>
-                            <a href="https://ratfest.tumblr.com">
-                                <h3>ratfest.tumblr.com</h3>  
-                            </a>
+                            Pochita's Goodies: A Pochita-themed Merch Box<br>
+                            <span class="caption">Guest Merch Artist</span>
                         </li>
                         <li>
-                            <h4><i class="bi bi-envelope-fill"></i>email</h4>
-                            <a href="mailto:ratfestival.art@gmail.com">
-                                <h3>ratfestival.art@gmail.com</h3>
-                            </a>
+                            Mahou Genshin: A Magical Girl Themed Genshin Zine <br>
+                            <span class="caption">Merch Artist</span>
                         </li>
                         <li>
-                            <h4><i class="bi bi-cup-hot-fill"></i></i>ko-fi</h4>
-                            <a href="https://ko-fi.com/ratfestival">
-                                <h3>ratfestival</h3>  
-                            </a>
+                            Ex Umbra: A Genshin Mafia AU Zine<br>
+                            <span class="caption">Guest Cover Artist</span>
                         </li>
+                        <li>
+                            Yours Truly, Kaeya: A Kaeya Travel Zine<br>
+                            <span class="caption">Comic Artist</span>
+                        </li>
+                        <li>
+                            Crimson Oni: An Itto Zine<br>
+                            <span class="caption">Comic Artist</span>
+                        </li>
+                        <li>
+                            Midnight Melodies: A Castlevania Zine<br>
+                            <span class="caption">Guest Page & Merch Artist</span>
+                        </li>
+                        <li>
+                            Morningtide: A Thoma Zine<br>
+                            <span class="caption">Page Artist</span>
+                        </li>
+
                     </ul>
                 </div>
-                
+            </div>
 
-                <div id="aboutSec" class="section">
-                    <div class="textContainer">
-                        <h3>About Me</h3>
-                        <p>
-                            chinese-american illustrator & designer. likes to lay in bed and be silly. you can call me allison or rat, whatever you prefer!
-                            i also have a separate account for my original ideas/ocs at <a href="https://allisonzart.carrd.co/">@allisonzart</a>.
-                            my notifications are off so for any inquiries, the best way to contact me is via email at <a href="mailto:ratfestival.art@gmail.com">ratfestival.art@gmail.com</a>.
-                        </p>
-                        <p>
-                            Unless it is commissioned work/i state otherwise, i allow use of my art on this account for icons/headers as long as i am credited in bio. 
-                            i also allow reupload to other sites as long as i am credited visibly and the link is sent to me so i can confirm. However,
-                            please do not reupload my work on sites where i already have an account!
-                        </p>
-                        <h3>Other Stuff You Might Want to Know</h3>
-                        
-                            <table>
-                                <tbody>
-                                <tr>
-                                    <th>software</th>
-                                    <td>mainly procreate, sometimes photoshop, learning CSP at a snails pace</td>
-                                </tr>
-                                <tr>
-                                    <th>procreate brushes</th>
-                                    <td>fading edge and elder 2.0 from <a href="https://georgvw.gumroad.com/l/free_procreate_ink_brushes">GeorgBrush.club Free Comic Ink Set</a>, Spectra, Tamarr, Nikko Rull</td>
-                                </tr>
-                                <tr>
-                                    <th>zine contributions</th>
-                                    <td>
-                                        <ul id="zineList">
-                                            <li><em>Devilish Delights: A Chainsawman Cookbook</em><br>(Page Artist)</li>
-                                            <li><em>Fluorescent Bloom: Men of Sumeru Zine</em><br>(Guest Page Artist)</li>
-                                            <li><em>Pochita's Goodies: A Pochita-themed Merch Box</em><br>(Guest Merch Artist)</li>
-                                            <li><em>Song of Stars: A Dainkae and Kaedain Zine</em><br>(Guest Artist)</li>
-                                            <li><em>Mahou Genshin: A Magical Girl Themed Genshin Zine</em><br>(Merch Artist)</li>
-                                            <li><em>Ex Umbra: A Genshin Mafia AU Zine</em><br>(Guest Page Artist)</li>
-                                            <li><em>Yours Truly, Kaeya: A Kaeya Travel Zine</em><br>(Comic Artist)</li>
-                                            <li><em>Crimson Oni: An Itto Zine</em><br>(Comic Artist)</li>
-                                            <li><em>Midnight Melodies: A Castlevania Zine</em><br>(Guest Page Artist)</li>
-                                            <li><em>Morningtide: A Thoma Zine</em><br>(Page Artist)</li>                                            
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>favorite food</th>
-                                    <td>cheese (+ a little salami, as a treat)</td>
-                                </tr>
-                               
-                                </tbody>
-                            </table>
-                        
-                           
-                        
-                    </div>
-                    
-                </div>
+            <img src="tempImage.jpg" id="aboutImage">
 
-                <div id="commSec" class="section">
-
-                    <div class="commContainer">
-
-                        <div class="slideshow">
-                            <div class="mySlides">
-                                <div class="slideInfo">
-                                    <div class="slideImg"><img src="imgs/sketch.png"></div>
-                                    <div class="slideDesc">
-                                        <div class="slideArrows">
-                                            <button class="slideButton" onclick="plusDivs(-1)">❮ Prev</button>
-                                            <button class="slideButton" onclick="plusDivs(1)">Next ❯</button>
-                                        </div>
-                                        <h3>Sketch</h3>
-                                        <p>Single color sketch. Lines may be messy. Sketch can be cleaned for an extra fee.</p>
-                                        <table>
-                                            <tr>
-                                                <th>portrait</th>
-                                                <td>20</td>
-                                            </tr>
-                                            <tr>
-                                                <th>halfbody</th>
-                                                <td>40</td>
-                                            </tr>
-                                            <tr>
-                                                <th>full</th>
-                                                <td>65</td>
-                                            </tr>
-                                            <tr>
-                                                <th>add bg/items</th>
-                                                <td>+20</td>
-                                            </tr>
-                                        </table>
-                                        
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <div class="mySlides">
-                                
-                                <div class="slideInfo">
-                                    <div class="slideImg"><img src="imgs/colorSketch.png"></div>
-                                    <div class="slideDesc">
-                                        <div class="slideArrows">
-                                            <button class="slideButton" onclick="plusDivs(-1)">❮ Prev</button>
-                                            <button class="slideButton" onclick="plusDivs(1)">Next ❯</button>
-                                        </div>
-                                        <h3>Colored Sketch</h3>
-                                        <p>
-                                            Add simple flat coloring to the sketch. Coloring might be messy/go over lines. Can be cleaned for an extra fee.
-                                        </p>
-                                        <table>
-                                            <tr>
-                                                <th>portrait</th>
-                                                <td>25</td>
-                                            </tr>
-                                            <tr>
-                                                <th>halfbody</th>
-                                                <td>55</td>
-                                            </tr>
-                                            <tr>
-                                                <th>full</th>
-                                                <td>80</td>
-                                            </tr>
-                                            <tr>
-                                                <th>add bg/items</th>
-                                                <td>+35</td>
-                                            </tr>
-                                        </table>
-                                        
-                                    </div>
-                                </div>
-                                
-                                
-                            </div>
-                            <div class="mySlides">
-                                
-                                <div class="slideInfo">
-                                    <div class="slideImg"><img src="imgs/paintSketch.png"></div>
-                                    <div class="slideDesc">
-                                        <div class="slideArrows">
-                                            <button class="slideButton" onclick="plusDivs(-1)">❮ Prev</button>
-                                            <button class="slideButton" onclick="plusDivs(1)">Next ❯</button>
-                                        </div>
-                                        <h3>Painted Sketch</h3>
-                                        <p>
-                                            sketch is painted & rendered with the lines visible on top. Cleaner = higher price, messier = lower price.
-                                        </p>
-                                        <table>
-                                            <tr>
-                                                <th>portrait</th>
-                                                <td>45</td>
-                                            </tr>
-                                            <tr>
-                                                <th>halfbody</th>
-                                                <td>75</td>
-                                            </tr>
-                                            <tr>
-                                                <th>full</th>
-                                                <td>100</td>
-                                            </tr>
-                                            <tr>
-                                                <th>add bg/items</th>
-                                                <td>+50</td>
-                                            </tr>
-                                        </table>
-                                        
-                                    </div>
-
-                                </div>
-                                
-                                
-                            </div>
-                            <div class="mySlides">
-                                
-                                <div class="slideInfo">
-                                    <div class="slideImg"><img src="imgs/lineart.png"></div>
-                                    <div class="slideDesc">
-                                        <div class="slideArrows">
-                                            <button class="slideButton" onclick="plusDivs(-1)">❮ Prev</button>
-                                            <button class="slideButton" onclick="plusDivs(1)">Next ❯</button>
-                                        </div>
-                                        <h3>Lineart</h3>
-                                        <p>
-                                            Sketch is inked with solid lines. Messier lineart = lower price, cleaner lineart = higher price.
-                                        </p>
-                                        <table>
-                                            <tr>
-                                                <th>portrait</th>
-                                                <td>55</td>
-                                            </tr>
-                                            <tr>
-                                                <th>halfbody</th>
-                                                <td>85</td>
-                                            </tr>
-                                            <tr>
-                                                <th>full</th>
-                                                <td>150</td>
-                                            </tr>
-                                            <tr>
-                                                <th>add bg/items</th>
-                                                <td>+80</td>
-                                            </tr>
-                                        </table>
-                                        
-                                    </div>
-
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <div class="mySlides">
-                                
-                                <div class="slideInfo">
-                                    <div class="slideImg"><img src="imgs/painting2.png"></div>
-                                    <div class="slideDesc">
-                                        <div class="slideArrows">
-                                            <button class="slideButton" onclick="plusDivs(-1)">❮ Prev</button>
-                                            <button class="slideButton" onclick="plusDivs(1)">Next ❯</button>
-                                        </div>
-                                        <h3>Painting</h3>
-                                        <p>
-                                            Fully painted illustration. Cleaner, more polish = higher price, messier = lower price.
-                                        </p>
-                                        <table>
-                                            <tr>
-                                                <th>portrait</th>
-                                                <td>200</td>
-                                            </tr>
-                                            <tr>
-                                                <th>halfbody</th>
-                                                <td>400</td>
-                                            </tr>
-                                            <tr>
-                                                <th>full</th>
-                                                <td>600</td>
-                                            </tr>
-                                            <tr>
-                                                <th>add bg/items</th>
-                                                <td>+100</td>
-                                            </tr>
-                                        </table>
-                                    
-                                    </div>
-                                    
-                                </div>
-                                
-                            </div>
-                            
-                            
-                        </div>
-
-                        
-
-                        
-                    <div class="textContainer">
-                        <div class="slidePagination">
-                            <button class="slideButton demo" onclick="currentDiv(1)">Sketch</button> 
-                            <button class="slideButton demo" onclick="currentDiv(2)">Colored Sketch</button> 
-                            <button class="slideButton demo" onclick="currentDiv(3)">Painted Sketch</button> 
-                            <button class="slideButton demo" onclick="currentDiv(4)">Lineart</button> 
-                            <button class="slideButton demo" onclick="currentDiv(5)">Painting</button> 
-                        </div>
-
-                        
-                        <h3>Personal Commission Info</h3>
-                        <p class="disclaimer">
-                            all prices are in USD and are very rough estimates, please contact me with the details of your request/your budget for a free quote!
-                            By commissioning me, you agree to the full <a href="commissions.html">terms of service</a>.
-                        </p>
-
-                        <table class="outline">
-                            <tr>
-                                <th>will do</th>
-                                <th>won't do</th>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <ul class="outlineList">
-                                        <li>ocs/fanart</li>
-                                        <li>furries</li>
-                                        <li>mech/armor</li>
-                                        <li>mild gore</li>
-                                        <li>action/combat scenes</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul class="outlineList">
-                                        <li>hateful/incest/pedophilia/fetish</li>
-                                        <li>NSFW</li>
-                                        <li>copy art styles</li>
-                                        <li>real people</li>
-                                        <li>nft</li>
-                                    </ul>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-
-                    
-
-                    <!--
-                    <div class="commContainer">
-                        <div class="commItem cHead" id="sketchH">
-                            <h2>sketch</h2>
-                            <p>Single color sketch. Lines may be messy. Sketch can be cleaned for an extra fee.</p>
-                        </div>
-                        <div class="commItem cHead" id="colorH">
-                            <h2>sketch + color</h2>
-                            <p>Add simple flat coloring to the sketch. Coloring might be messy/go over lines. Can be cleaned for an extra fee.</p>
-                        </div>
-                        <div class="commItem cHead" id="renderH">
-                            <h2>painted sketch</h2>
-                            <p>sketch is painted & rendered with the lines visible on top. Cleaner = higher price, messier = lower price</p>
-                        </div>
-                        <div class="commItem cHead" id="lineH">
-                            <h2>colored lineart</h2>
-                            <p>Sketch is inked with solid lines. Messier lineart = lower price, cleaner lineart = higher price.</p>
-                        </div>
-                        <div class="commItem cHead" id="paintingH">
-                            <h2>painting</h2>
-                            <p>Fully painted illustration. Cleaner, more polish = higher price, messier = lower price.</p>
-                        </div>  
-                        
-                        
-                        <div class="commItem cImg" id="sketchImg">
-                            <img src="imgs/sketch.png">
-                        </div>
-                        <div class="commItem cImg">
-                            <img src="imgs/colorSketch.png" id="colorImg">
-                        </div>
-                        <div class="commItem cImg">
-                            <img src="imgs/paintSketch.png" id="renderImg">
-                        </div>
-                        <div class="commItem cImg">
-                            <img src="imgs/lineart.png" id="lineImg">
-                        </div>
-                        <div class="commItem cImg">
-                            <img src="imgs/painting.png" id="paintingImg">
-                        </div>   
-                
-                        <div class="commItem cText" id="sketchP">
-                            <table>
-                                <tr>
-                                    <th>portrait</th>
-                                    <td>20</td>
-                                </tr>
-                                <tr>
-                                    <th>halfbody</th>
-                                    <td>40</td>
-                                </tr>
-                                <tr>
-                                    <th>full</th>
-                                    <td>65</td>
-                                </tr>
-                                <tr>
-                                    <th>add bg/items</th>
-                                    <td>+20</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="commItem cText" id="colorP">
-                            <table>
-                                <tr>
-                                    <th>portrait</th>
-                                    <td>25</td>
-                                </tr>
-                                <tr>
-                                    <th>halfbody</th>
-                                    <td>55</td>
-                                </tr>
-                                <tr>
-                                    <th>full</th>
-                                    <td>80</td>
-                                </tr>
-                                <tr>
-                                    <th>add bg/items</th>
-                                    <td>+35</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="commItem cText" id="renderP">
-                            <table>
-                                <tr>
-                                    <th>portrait</th>
-                                    <td>45</td>
-                                </tr>
-                                <tr>
-                                    <th>halfbody</th>
-                                    <td>75</td>
-                                </tr>
-                                <tr>
-                                    <th>full</th>
-                                    <td>100</td>
-                                </tr>
-                                <tr>
-                                    <th>add bg/items</th>
-                                    <td>+50</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="commItem cText" id="lineP">
-                            <table>
-                                <tr>
-                                    <th>portrait</th>
-                                    <td>55</td>
-                                </tr>
-                                <tr>
-                                    <th>halfbody</th>
-                                    <td>85</td>
-                                </tr>
-                                <tr>
-                                    <th>full</th>
-                                    <td>150</td>
-                                </tr>
-                                <tr>
-                                    <th>add bg/items</th>
-                                    <td>+80</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="commItem cText" id="paintingP">
-                            <table>
-                                <tr>
-                                    <th>portrait</th>
-                                    <td>200</td>
-                                </tr>
-                                <tr>
-                                    <th>halfbody</th>
-                                    <td>400</td>
-                                </tr>
-                                <tr>
-                                    <th>full</th>
-                                    <td>600</td>
-                                </tr>
-                                <tr>
-                                    <th>add bg/items</th>
-                                    <td>+100</td>
-                                </tr>
-                            </table>
-                        </div> 
-                    </div>
-                -->
-                    
-
-
-
-                </div>
-
-                
             
 
-            </div>
-        </div>
+            
+            
+            
+
+        </section>
+
+        <section class="page hiddenPage" id="commissions">
+            <h1>Commissions</h1>
+            <p>
+                Thank you for your interest in commissioning me! I'm currently taking donation commissions to raise funds to help <a href="gofund.me/54fbb827">Bashar, a palestinian undergrad to evacuate gaza</a>! Please <a href="mailto:ratfestival.art@gmail.com">email</a> proof of your donation as well as the details of your request to me, and I will confirm I that have accepted your commission!
+            </p>
+            <section>
+                <ul>
+                    <li>Personal use only!</li>
+                    <li>single character</li>
+                    <li>skeb style (you get what you get)</li>
+                    <li>fanart, ocs, anthro, mech are all ok!!</li>
+                </ul>
+            </section>
+            
+
+            <section id="slotContainer">
+                
+                <h3>Color Slots Left: <strong>1</strong></h3>
+                <h3>B/W Slots Left: <strong>18</strong></h3>
+                
+            </section>
+
+            
+
+            <section class="pageImages">
+                <img src="https://64.media.tumblr.com/f24f5053081105f5cddd09bb626b6b4f/e30a2d1e4f7fc37d-7f/s2048x3072/a5a9bed2a1b2b40752057ca1b46a19da721809c8.jpg">
+                <img src="commp2.jpg";>
+            </section>
+
+            
+        </section>
+
+        <section class="page hiddenPage" id="faq">
+            <h1>FAQ</h1>
+            <table>
+                <tr class="question">
+                    <th>Q.</th>
+                    <td>Can I use your art as my icon/header?</td>
+                </tr>
+                <tr class="answer">
+                    <th>A.</th>
+                    <td>As long as it's not a commission and/or I specified otherwise, I don't mind. However, please credit me visibly in your bio!</td>
+                </tr>
+                <tr class="question">
+                    <th>Q.</th>
+                    <td>What brushes do you use?</td>
+                </tr>
+                <tr class="answer">
+                    <th>A.</th>
+                    <td>I'm always experimenting with different brushes so it changes from time to time, but for painting, I use Procreate's default Tamarr, Spectra, Styx, and Stucco brush. For the color pencil effect, I use <a href="https://fatimamandouh.gumroad.com/l/sdcbd">Fatima Mandouh's color pencil brushes</a> and <a href="https://folio.procreate.com/discussions/10/28/37965">Sven Hebinck's Faber Castell Polychromos pencil</a>. For sketching/inking, I use a modified version of Procreate's Inka brush where the only change I made was changing the brush shape to a rounder shape, and the fading edge brushes from <a href="https://georgvw.gumroad.com/l/free_procreate_ink_brushes">GeorgBrush.club Free Comic Ink Set</a>. </td>
+                </tr>
+                <tr class="question">
+                    <th>Q.</th>
+                    <td>Can I reupload your artwork to another site?</td>
+                </tr>
+                <tr class="answer">
+                    <th>A.</th>
+                    <td>I don't mind as long as it's not a website where I already have an account and my art is not being modified/used for AI/misused etc. However, I'd also appreciate if you could send me the link so I can confirm it's not being used maliciously. </td>
+                </tr>
+                
+            </table>
+        </section>
+
     </main>
 
 </body>
 
-<script>
-    var slideIndex = 1;
-    showDivs(slideIndex);
-
-    function plusDivs(n) {
-    showDivs(slideIndex += n);
-    }
-
-    function currentDiv(n) {
-    showDivs(slideIndex = n);
-    }
-
-    function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("demo");
-    if (n > x.length) {slideIndex = 1}    
-    if (n < 1) {slideIndex = x.length}
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";  
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" selectedSlide", "");
-    }
-    x[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " selectedSlide";
-    }
-</script>
 
 <script>
     let tabs = document.getElementsByClassName('tab');
-    let sections = document.getElementsByClassName('section');
-
-    let ratfestTab = document.getElementById('ratfestivalTab');
-    let allisonTab = document.getElementById('allisonzartTab');
-    let aboutTab = document.getElementById('aboutTab');
+    let sections = document.getElementsByClassName('page');
 
     for (let i = 0; i < tabs.length; i++) {
         tabs[i].addEventListener("click", function() {toggleSelected(i)});
@@ -610,21 +281,86 @@
         let userClicked = tabs[index];
         let associatedSection = sections[index];
         
-        if (!userClicked.classList.contains('selectedTab')) {
+        if (userClicked.classList.contains('hiddenTab')) { /* if the clicked tab is hidden*/
+
             for (let i = 0; i < tabs.length; i++) {
-                if (tabs[i].classList.contains('selectedTab')) {
-                    tabs[i].classList.remove('selectedTab');
-                    sections[i].classList.remove('selected');
+                if (!tabs[i].classList.contains('hiddenTab')) { /* if the tab being hidden is false */
+                    tabs[i].classList.add('hiddenTab');  /*hide it*/
+                    sections[i].classList.add('hiddenPage'); /*hide the page*/
+                    break;
                 }
             }
 
-            userClicked.classList.add('selectedTab');
-            associatedSection.classList.add('selected');
+            userClicked.classList.remove('hiddenTab'); /*take the tab clicked on out of hiding*/
+            associatedSection.classList.remove('hiddenPage'); /*take the corresponding page out of hiding*/
         }
 
         return ;
     }
-    
+
+    /* mobile menu*/
+
+    let hamburger = document.getElementById('mobileHamburger');
+    let hamX = document.getElementById('mobileClose');
+    let sidebar = document.getElementById('sidebar');
+    let page = document.getElementById('pageContainer');
+
+    hamburger.addEventListener("click", function() { openMenu() });
+
+    for (let i = 0; i < tabs.length; i++) {
+        tabs[i].addEventListener("click", function() {closeMenu()});
+    }
+
+    hamX.addEventListener("click", function() { closeMenu() });
+
+
+    function openMenu() {
+        if (!sidebar.classList.contains('opened')) {
+            sidebar.classList.add('opened');
+            page.classList.add('hidePage');
+        } 
+    }
+
+    function closeMenu() {
+        sidebar.classList.remove('opened');
+        page.classList.remove('hidePage');
+    }
+
+    /*view image*/ 
+    let overlay = document.getElementById('overlayContainer');
+    let popX = document.getElementById('popClose');
+    let thumbnails = document.getElementsByClassName('thumbnail');
+    let overlayImage = document.getElementById('fullImg');
+
+    for (let i = 0; i < thumbnails.length; i++) {
+        let image = thumbnails[i].style.backgroundImage;
+        thumbnails[i].addEventListener("click", function() {openOverlay(image)});
+    }
+
+    popX.addEventListener("click", function() {closeOverlay()});
+
+    function openOverlay(image) {
+        overlayImage.style.backgroundImage = image;
+        overlay.classList.add('openOverlay');
+        pauseScroll();
+        
+    }
+
+    function closeOverlay() {
+        overlayImage.style.backgroundImage = "unset";
+        overlay.classList.remove('openOverlay');
+        unPauseScroll();
+    }
+
+
+    function pauseScroll() {
+        document.body.classList.add('scrollPaused');
+    }
+
+    function unPauseScroll() {
+        document.body.classList.remove('scrollPaused');
+    }
+
 
 </script>
 
