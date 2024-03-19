@@ -296,12 +296,12 @@ main {
 
 .portrait {
     height: 120vw;
-    background-color: aqua;
+    background-color: var(--background);
 }
 
 .landscape {
     height: 60vw;
-    background-color: blueviolet;
+    background-color: var(--background);
 }
 
 #overlayContainer {
