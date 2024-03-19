@@ -296,12 +296,12 @@ main {
 
 .portrait {
     height: 120vw;
-    background-color: var(--background);
+    background-color: var(--accent);
 }
 
 .landscape {
     height: 60vw;
-    background-color: var(--background);
+    background-color: var(--accent);
 }
 
 #overlayContainer {
