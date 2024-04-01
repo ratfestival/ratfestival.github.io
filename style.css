@@ -50,6 +50,11 @@ body {
 
 a {
     color: var(--accent);
+    text-decoration-color: var(--background);
+}
+
+a:hover {
+    text-decoration-color: var(--accent);
 }
 
 #siteTitle, #siteLinks {
@@ -434,6 +439,10 @@ td, th {
     padding-bottom: 10px;
 }
 
+th {
+    padding-right: 10px;
+}
+
 .question {
     color: var(--secondaryColor);
 }
@@ -612,7 +621,7 @@ td, th {
 
 /* Desktop */
 
-@media only screen and (min-width: 850px) {
+@media only screen and (min-width: 900px) {
     body {
         margin: calc(30px + 1vw );
         grid-template-columns: 20vw auto;
@@ -627,7 +636,7 @@ td, th {
 
     #socialIcons li {
         width: 7%;
-        font-size: 18px;
+        font-size: calc(15px + 0.2vw);
 
     
     }
