@@ -611,6 +611,11 @@ th {
         margin-bottom: 35px;
     }
 
+    #linkTable th {
+        color: var(--mainColor);
+        text-align: left;
+    }
+
     #slotContainer {
     }
 
