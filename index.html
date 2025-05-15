@@ -28,6 +28,11 @@
             document.getElementById("mobileHeader").style.height = "45px";
         }
         }
+
+        
+
+        
+
     </script>
 
     <!-- smallScreen = mobile, wideScreen = tablet/desktop -->
@@ -114,52 +119,10 @@
 
         <section class="page" id="portfolio">
             <div class="gallery">
-                <!--
-                <div class="thumbnail landscape">
-                    <img src="pfolio/gear5luffy.jpg">
-                </div>
-                <div class="thumbnail portrait">
-                    <img src="pfolio/csmStickersheetPreview.jpg">
-                </div>
-                <div class="thumbnail portrait">
-                    <img src="pfolio/Bonney_and_Kuma.jpg">
-                </div>
-                <div class="thumbnail portrait">
-                    <img src="pfolio/KidPirates.jpg">
-                </div>
-                <div class="thumbnail portrait">
-                    <img src="pfolio/law.jpg">
-                </div>
-                <div class="thumbnail landscape">
-                    <img src="pfolio/horses.jpg">
-                </div>
-                <div class="thumbnail portrait">
-                    <img src="pfolio/baizhuA3.jpg">
-                </div>
-                <div class="thumbnail portrait">
-                    <img src="pfolio/vash.jpeg">
-                </div>
-                <div class="thumbnail landscape">
-                    <img src="pfolio/aquarium.jpg">
-                </div>
-                <div class="thumbnail portrait">
-                    <img src="pfolio/raidenBoss.jpg">
-                </div>-->
                 
-                <div class="thumbnail landscape" style="background-image: url(pfolio/gear5luffy.jpg);"></div>
-                <div class="thumbnail portrait" style="background-image: url(pfolio/csmStickersheetPreview.jpg);"></div>
-                <div class="thumbnail portrait" style="background-image: url(pfolio/Bonney_and_Kuma.jpg);"></div>
-                <div class="thumbnail portrait" style="background-image: url(pfolio/KidPirates.jpg);"></div>
-                <div class="thumbnail portrait" style="background-image: url(pfolio/law.jpg);"></div>
-                <div class="thumbnail landscape" style="background-image: url(pfolio/horses.jpg);"></div>
-                <div class="thumbnail portrait" style="background-image: url(pfolio/baizhuA3.jpg);"></div>
-                <div class="thumbnail portrait" style="background-image: url(pfolio/vash.jpeg);"></div>
-                <div class="thumbnail landscape" style="background-image: url(pfolio/aquarium.jpg);"></div>
-                <div class="thumbnail portrait" style="background-image: url(pfolio/raidenBoss.jpg);"></div>
             </div>
         </section>
 
-        
 
         <section   class="page hiddenPage" id="about">
             
@@ -314,6 +277,39 @@
 
 
 <script>
+
+    
+let galleryImgs = [
+            {file: "timebomb.webp", isLandscape: true},
+            {file: "csmStickersheetPreview.webp", isLandscape: false},
+            {file: "Bonney_and_Kuma.webp", isLandscape: false},
+            {file: "gear5luffy.webp", isLandscape: true},
+            {file: "KidPirates.webp", isLandscape: false},
+            {file: "law.webp", isLandscape: false},
+            {file: "vash.webp", isLandscape: false},
+            {file: "baizhuA3.webp", isLandscape: false},
+            {file: "horses.webp", isLandscape: true},
+            {file: "aquarium.webp", isLandscape: true},
+            {file: "raidenBoss.webp", isLandscape: false},
+        ];
+
+        let pfolioContent = document.getElementById('portfolio').getElementsByClassName('gallery')[0];
+
+        for (let i = 0; i < galleryImgs.length; i++) {
+            let newImg = document.createElement('div');
+            let imgData = galleryImgs[i];
+            newImg.setAttribute('style', 'background-image: url(pfolio/' + imgData.file + ');');
+            newImg.classList.add('thumbnail');
+
+            if (imgData.isLandscape) {
+                newImg.classList.add('landscape');
+            } else {
+                newImg.classList.add('portrait');
+            }
+
+            pfolioContent.appendChild(newImg);
+        }
+
     let tabs = document.getElementsByClassName('tab');
     let sections = document.getElementsByClassName('page');
 
